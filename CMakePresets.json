@@ -1,0 +1,34 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "default",
+            "hidden": true,
+            "generator": "Ninja",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "D:/Soft/gnuarm/bin/arm-none-eabi-gcc.exe",
+                "CMAKE_CXX_COMPILER": "D:/Soft/gnuarm/bin/arm-none-eabi-g++.exe",
+                "CMAKE_TRY_COMPILE_TARGET_TYPE": "STATIC_LIBRARY",
+                "CMAKE_SYSTEM_NAME": "Generic",
+                "CMAKE_SYSTEM_PROCESSOR": "arm",
+                "CMAKE_EXE_LINKER_FLAGS": ""
+            }
+        },
+        {
+            "name": "debug",
+            "inherits": "default",
+            "displayName": "Build stm32-practical",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "build",
+            "configurePreset": "debug"
+        }
+    ]
+}
