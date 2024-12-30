@@ -1,0 +1,39 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "(stm32-practical) Debug (J-Link)",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/debug/stm32-practical/stm32-practical.elf",
+            "servertype": "jlink",
+            "serverArgs": [
+                "-speed",
+                "4000"
+            ],
+            "device": "STM32F407VE",
+            "interface": "swd",
+            "rtos": "FreeRTOS",
+            "preLaunchTask": "jlink-flash-stm32-practical",
+            "svdFile": "",
+        },
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "(stm32-practical-ex1) Debug (J-Link)",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/debug/stm32-practical-ex1/stm32-practical-ex1.elf",
+            "servertype": "jlink",
+            "serverArgs": [
+                "-speed",
+                "4000"
+            ],
+            "device": "STM32F407VE",
+            "interface": "swd",
+            "rtos": "FreeRTOS",
+            "preLaunchTask": "jlink-flash-stm32-practical-ex1",
+            "svdFile": "",
+        },
+    ]
+}

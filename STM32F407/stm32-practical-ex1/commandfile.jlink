@@ -1,0 +1,8 @@
+connect
+reset
+halt
+erase
+loadfile D:/Istu/mu-repository/build/debug/stm32-practical-ex1/stm32-practical-ex1.bin
+reset
+halt
+quit
