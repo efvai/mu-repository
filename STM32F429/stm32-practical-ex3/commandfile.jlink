@@ -1,0 +1,11 @@
+connect
+reset
+halt
+erase 0x08000000 0x0805FFFF
+loadfile D:/code/vscode-stm/torqer-display/build/debug/bootloader/torqer-display-bootloader.elf 
+verifybin D:/code/vscode-stm/torqer-display/build/debug/bootloader/torqer-display-bootloader.bin 0x08000000
+loadfile D:/code/vscode-stm/torqer-display/build/debug/application/torqer-display-app.bin 0x08010000
+verifybin D:/code/vscode-stm/torqer-display/build/debug/application/torqer-display-app.bin  0x08010000
+reset
+halt
+quit
